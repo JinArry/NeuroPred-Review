@@ -1,0 +1,17 @@
+# Common analysis packages
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+numba
+joblib
+xgboost
+gensim
+
+# Deep-learning and protein-language-model packages
+torch
+tensorflow
+transformers
+fair-esm
