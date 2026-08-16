@@ -1,12 +1,13 @@
 # NeuroPred-Review
 
-Code accompanying the review and comparative evaluation of sequence-based
-neuropeptide predictors.
+Code and processed benchmark data accompanying the review and comparative
+evaluation of sequence-based neuropeptide predictors.
 
-The repository currently contains the analysis and model-evaluation code only.
-Benchmark sequences, trained weights, prediction outputs, and third-party
-implementations are not redistributed. Obtain those resources from their
-original providers and follow the applicable licences and terms of use.
+The repository includes the three dataset versions used in the analyses:
+Dataset A, the original Dataset B, and Dataset B-standard20. Trained weights,
+prediction outputs, raw source repositories, and third-party implementations
+are not redistributed. Obtain those resources from their original providers
+and follow the applicable licences and terms of use.
 
 ## Repository structure
 
@@ -17,6 +18,10 @@ code/
 ├── implementation_verification/   # Checks of released predictor implementations
 ├── unified_comparison/            # Retraining under the shared experimental protocol
 └── cross_dataset_evaluation/      # Bidirectional source-to-target evaluation
+data/processed/
+├── dataset_a_predneurop/           # PredNeuroP-lineage benchmark
+├── dataset_b_neuropred_plm_original/ # Original NeuroPred-PLM-lineage benchmark
+└── dataset_b_neuropred_plm_standard20/ # Dataset B restricted to the standard AA20 alphabet
 ```
 
 The code covers four empirical components reported in the review:
@@ -39,11 +44,13 @@ original method releases. The relevant repositories include:
 - [NeuroScale](https://github.com/ZhangHongqi215/NeuroScale)
 - [NeuroPred-MTCL](https://github.com/JinArry/NeuroPred-MTCL)
 
-PredNeuroP and NeuroPred-PLM source datasets are expected, by default, under
+The processed metadata required by the principal overlap and evaluation scripts
+is included under `data/processed/`. The preparation script can rebuild these
+files from source repositories placed under
 `data/raw/source_repos/PredNeuroP/` and
-`data/raw/source_repos/NeuroPred-PLM/`. Most model scripts instead accept the
-location of an external repository, input manifest, and output directory as
-command-line arguments; run a script with `--help` to inspect its interface.
+`data/raw/source_repos/NeuroPred-PLM/`. Most model scripts accept the location
+of an external repository, input manifest, and output directory as command-line
+arguments; run a script with `--help` to inspect its interface.
 
 ## Environment
 
@@ -67,8 +74,10 @@ are written to user-specified locations or to the ignored `results/` directory.
 
 ## Licence
 
-Original code in this repository is released under the MIT License. Third-party
-datasets, models, and software remain subject to their original licences.
+Original code in this repository is released under the MIT License. The MIT
+licence does not supersede the terms of the source databases or repositories
+from which the processed benchmark records were derived. Third-party datasets,
+models, and software remain subject to their original licences.
 
 ## Citation
 

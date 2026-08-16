@@ -1,0 +1,2 @@
+# Empty final TSV fields are represented by a terminal tab.
+data/processed/**/metadata.tsv whitespace=-blank-at-eol

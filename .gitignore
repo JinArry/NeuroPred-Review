@@ -6,7 +6,16 @@ __pycache__/
 venv/
 .env
 
-data/
+data/*
+!data/README.md
+!data/processed/
+data/processed/*
+!data/processed/dataset_a_predneurop/
+!data/processed/dataset_a_predneurop/**
+!data/processed/dataset_b_neuropred_plm_original/
+!data/processed/dataset_b_neuropred_plm_original/**
+!data/processed/dataset_b_neuropred_plm_standard20/
+!data/processed/dataset_b_neuropred_plm_standard20/**
 results/
 outputs/
 predictions/
